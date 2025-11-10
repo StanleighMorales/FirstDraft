@@ -5,12 +5,16 @@ defineProps({
     required: true,
   },
 })
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
   <h1 class="text-3xl font-bold underline text-red-100 p-4">
     Hello Tailwind CSS!
   </h1>
+  <Button variant="outline" class="mt-4">
+    Click Me
+  </Button>
 </template>
 
 <style scoped>
