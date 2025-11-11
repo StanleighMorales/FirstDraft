@@ -2,7 +2,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+
 
 #app {
   max-width: 1280px;
@@ -17,6 +17,9 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+p{
+  cursor: default;
 }
 
 

@@ -22,7 +22,9 @@ const showPassword = ref(false);
     <Card class="color-stone-50 w-lg p-8 shadow-lg">
       <CardHeader class="flex justify-center content-center">
         <CardAction>
-          <CardTitle class="text-lg place-self-center">Welcome Back</CardTitle>
+          <CardTitle class="place-self-center">
+            <p class="text-lg">Welcome Back</p>
+          </CardTitle>
           <CardDescription>Please sign in to your account</CardDescription>
         </CardAction>
       </CardHeader>
@@ -47,7 +49,7 @@ const showPassword = ref(false);
                 Password
               </Label>
               <button type="button" @click="showPassword = !showPassword"
-                class="absolute inset-y-0 right-0 flex items-center pr-3 text-stone-500 hover:text-stone-700">
+                class="absolute inset-y-0 right-0 flex items-center pr-3 text-stone-500 hover:text-stone-700 cursor-pointer">
                 <svg v-if="!showPassword" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                   stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -65,7 +67,7 @@ const showPassword = ref(false);
           </div>
           <div class="flex justify-between items-center pt-2">
             <div class="flex items-center gap-2">
-              <input type="checkbox" />
+              <input type="checkbox" class="cursor-pointer" />
               <p>Remember me</p>
             </div>
 
@@ -78,15 +80,17 @@ const showPassword = ref(false);
         </form>
       </CardContent>
       <CardFooter class="flex-auto flex-col gap-4">
-        <Button type="submit" class="w-full mb-2">
+        <Button type="submit" class="w-full mb-2 cursor-pointer">
           Sign In
         </Button>
         <div class="relative flex items-center w-full">
           <span class="flex-grow h-px bg-stone-200"></span>
-          <span class="flex-shrink text-xs text-stone-500 px-4 uppercase">Or</span>
+          <span class="flex-shrink text-xs text-stone-500 px-4 uppercase">
+            <p>Or</p>
+          </span>
           <span class="flex-grow h-px bg-stone-200"></span>
         </div>
-        <Button variant="outline">
+        <Button variant="outline" class="cursor-pointer">
           <svg class="w-5 h-5 mr-2" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M533.5 278.4c0-17.4-1.5-34.1-4.2-50.4H272v95.5h147.1c-6.4 34.7-25.9 64.1-55.1 83.8v69.7h88.9c52.2-48 82.6-119 82.6-198.6z"
@@ -103,7 +107,7 @@ const showPassword = ref(false);
           Sign In with Google
 
         </Button>
-        <p>Don't have an account? <a href="" class="text-sky-800">Create an account</a></p>
+        <p>Don't have an account? <a href="" class="text-sky-800 cursor-pointer">Create an account</a></p>
       </CardFooter>
     </Card>
   </div>
