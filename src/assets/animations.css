@@ -1,0 +1,20 @@
+.card-fade-enter-active,
+.card-fade-leave-active {
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/*
+  It's faded out (opacity: 0) and positioned slightly to the RIGHT (translateX(50px)).
+*/
+.card-fade-enter-from {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+/*
+  It fades out (opacity: 0) and slides slightly to the LEFT (translateX(-50px)).
+*/
+.card-fade-leave-to {
+  opacity: 0;
+  transform: translateX(-50px);
+}
