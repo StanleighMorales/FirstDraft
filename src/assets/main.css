@@ -1,8 +1,12 @@
 @import './base.css';
+/* 
+  ---break--- */
+@plugin 'tailwindcss-animate';
 @import "tailwindcss";
 @import "tw-animate-css";
-
-
+/* 
+  ---break--- */
+@custom-variant dark (&:is(.dark *));
 
 #app {
   max-width: 1280px;
@@ -21,7 +25,6 @@
 p{
   cursor: default;
 }
-
 
 @media (min-width: 1024px) {
   body {
