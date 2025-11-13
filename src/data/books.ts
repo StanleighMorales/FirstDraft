@@ -1,12 +1,12 @@
 export const books = [
   {
     id: 1,
-    title: "Solo Leveling",
-    author: "Chugong",
-    publishedYear: "2018",
+    title: "The Hundreth Decent",
+    author: "Karino Shin",
+    publishedYear: "2025",
     cover: "manhwa-cover.webp",
-    chapters: 179,
-    status: "Completed",
+    chapters: 1,
+    status: "Ongoing",
     rating: 4.8,
     genre: ["Action", "Adventure", "Fantasy"," Supernatural"]
   }

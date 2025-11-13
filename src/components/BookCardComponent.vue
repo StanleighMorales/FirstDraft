@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { books } from "@/data/books";
 import coverImage from "@/assets/images/manhwa-cover.webp";
+
+const badgeColor = "warning";
 </script>
 
 <template>
@@ -55,11 +57,17 @@ import coverImage from "@/assets/images/manhwa-cover.webp";
                         </CardDescription>
                     </div>
                 </CardFooter>
-                <Badge class=" absolute justify-center bottom-32 right-2 h-10 min-w-10 px-1 text-white !font-bold bg-red-700"
-                    variant="destructive">
+                <Badge :class="[
+                    'absolute justify-center bottom-32 right-2 h-10 min-w-10 px-1 text-white !font-bold',
+                    book.status === 'Ongoing'
+                        ? 'bg-yellow-500 hover:!bg-yellow-500'
+                        : book.status === 'Completed'
+                            ? 'bg-green-600 hover:!bg-green-600'
+                            : 'bg-red-600 hover:!bg-red-600'
+                ]">
                     {{ book.status }}
-
                 </Badge>
+
             </Card>
         </Button>
     </div>
