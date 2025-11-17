@@ -10,8 +10,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { books } from "@/data/books";
 import coverImage from "@/assets/images/manhwa-cover.webp";
-
-const badgeColor = "warning";
 </script>
 
 <template>
