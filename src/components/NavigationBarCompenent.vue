@@ -1,0 +1,89 @@
+<script setup lang="ts">
+import { Button } from "@/components/ui/button";
+</script>
+<template>
+
+    <div class="nav shadow-xl/20 shadow-stone-50/50 rounded-xl bg-transparent w-full border-y border-stone-200/30">
+        <nav class="navigation-bar flex justify-between items-center py-4 px-8">
+            <div class="logo text-2xl font-bold">
+                <p class="font-marker font-extrabold text-4xl text-stone-100">FirstDraft</p>
+            </div>
+            <div>
+                <button class="button">
+                    Sign In
+                </button>
+            </div>
+        </nav>
+    </div>
+</template>
+
+<style scoped>
+.button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffffc6;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    border-color: rgb(255, 255, 255);
+}
+
+.button:hover .icon {
+    transform: translate(4px);
+}
+
+.button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+</style>

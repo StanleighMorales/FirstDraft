@@ -6,17 +6,21 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { books } from "@/data/books";
+import { books, Book } from "@/data/books";
 import coverImage from "@/assets/images/manhwa-cover.webp";
+
+defineProps<{
+    book: Book
+}>();
+
 </script>
 
 <template>
-    <div id="book-card" class="flex flex-wrap justify-center gap-6 p-6 ">
-        <Button v-for="book in books" :key="book.id" variant="ghost" class="p-0 bg-transparent hover:bg-transparent">
-            <Card class="relative flex flex-col w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden p-0 gap-0">
-
+    <div id="book-card" class="flex justify-center gap-6 p-0 relative">
+        <div class="w-full px-2 gap-6 grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]">
+            <Card
+                class="relative flex flex-col w-full h-96 bg-white rounded-lg shadow-md overflow-hidden p-0 gap-0">
                 <CardHeader class="p-0 rounded-t-lg overflow-hidden">
                     <img :src="coverImage" :alt="book.title" class="w-full h-64 object-cover" />
                 </CardHeader>
@@ -65,8 +69,7 @@ import coverImage from "@/assets/images/manhwa-cover.webp";
                 ]">
                     {{ book.status }}
                 </Badge>
-
             </Card>
-        </Button>
+        </div>
     </div>
 </template>

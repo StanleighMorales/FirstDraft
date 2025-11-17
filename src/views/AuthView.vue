@@ -21,9 +21,6 @@ const switchAuth = () => {
 }
 </script>
 <template>
-  <div class="stars"></div>
-  <div class="twinkling"></div>
-
   <Transition name="card-fade" mode="out-in">
     <div class="flex w-full items-center justify-center" v-if="!register">
       <Card class="color-stone-50 w-lg p-8 shadow-lg">
@@ -219,5 +216,4 @@ const switchAuth = () => {
 :global(body) {
   background-color: #050505;
 }
-
 </style>
